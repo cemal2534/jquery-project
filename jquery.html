@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title>Jquery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+        integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+
+    html,body{
+     margin: 0;
+     padding: 0;
+    }
+   
+   #container{
+    background-color: aqua;
+    height: 250px;
+    width: 100%;
+    display: none;
+   }
+
+   #kapsayan{
+    background-color: aqua;
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid white;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+     justify-content: center; 
+       position: relative; 
+    
+    
+   } 
+.carpı{
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+</style>
+
+<script>
+
+    $(function(){
+
+        $("#kapsayan").click(function(){
+            $("#container").slideToggle("slow");
+        });
+
+        $(function(){
+
+            $(".carpı").click(function(){
+                $("#box").toggle("slow");
+            })
+        })
+    });
+
+
+
+</script>
+
+<body>
+ <div id="box">
+
+      <div id="kapsayan"> <br>
+        <span class="text">Mesajınız Var</span>
+     <span class="carpı">X</span>
+</div>
+
+<div id="container">   
+            
+            
+        </div>
+
+       </div>
+        
+
+   
+
+
+
+
+</body>
+
+</html>
